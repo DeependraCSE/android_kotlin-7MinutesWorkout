@@ -1,4 +1,4 @@
-This application is made in Android Kotlin with the help of different activity and different layout.
+This application is made in Android Kotlin with the help of different activity and different layout. 
 This application is made for excercise of 7 minutes.
 In this application we can start workout, perform current excercise, rest for few second and prepaire for next excercie.
 
