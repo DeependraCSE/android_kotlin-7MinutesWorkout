@@ -24,7 +24,7 @@ class BMIActivity : AppCompatActivity() {
         setSupportActionBar(binding?.toolbarBmiActivity)
         if (supportActionBar != null){
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
-            supportActionBar?.title = "Calculate BMI"
+            supportActionBar?.title = resources.getString(R.string.calculate_BMI)
         }
 
         binding?.toolbarBmiActivity?.setNavigationOnClickListener {
@@ -135,7 +135,7 @@ class BMIActivity : AppCompatActivity() {
                 val bmi = weightValue / (heightValue * heightValue)
                 displayBMIResult(bmi = bmi)
             }else{
-                Toast.makeText(this,"Please Enter valid value", Toast.LENGTH_LONG).show()
+                Toast.makeText(this,resources.getString(R.string.please_enter_valid_value), Toast.LENGTH_LONG).show()
             }
         }else{
             if (validateUsUnit()){
@@ -149,7 +149,7 @@ class BMIActivity : AppCompatActivity() {
                 val bmi = 703 * (usUnitWeightValue / (heightValue * heightValue))
                 displayBMIResult(bmi = bmi)
             }else{
-                Toast.makeText(this,"Please Enter valid value", Toast.LENGTH_LONG).show()
+                Toast.makeText(this,resources.getString(R.string.please_enter_valid_value), Toast.LENGTH_LONG).show()
             }
         }
     }

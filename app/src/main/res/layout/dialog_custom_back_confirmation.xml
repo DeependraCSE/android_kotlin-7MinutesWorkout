@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Are you sure?"
+        android:text="@string/are_you_sure"
         android:textSize="18sp"
         android:textStyle="bold"
         android:textColor="@color/black"/>
@@ -21,16 +21,19 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:gravity="center"
-        android:text="This will stop your workout. You\'ve come this far, are you sure you want to quit"
+        android:text="@string/quit_message"
         android:textSize="16sp"
         android:textColor="#212121"/>
 
     <LinearLayout
+        style="?android:attr/buttonBarStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:orientation="horizontal">
+
         <Button
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:id="@+id/btnYes"
@@ -38,10 +41,12 @@
             android:layout_weight="1"
             android:backgroundTint="@color/colorAccent"
             android:gravity="center"
-            android:text="Yes"
+            android:text="@string/yes"
             android:textColor="@color/white"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
+
         <Button
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:id="@+id/btnNo"
@@ -49,7 +54,7 @@
             android:layout_weight="1"
             android:backgroundTint="@color/colorAccent"
             android:gravity="center"
-            android:text="No"
+            android:text="@string/no"
             android:textColor="@color/white"
             android:textSize="16sp"/>
     </LinearLayout>

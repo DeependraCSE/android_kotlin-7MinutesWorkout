@@ -1,4 +1,34 @@
 <resources>
     <string name="app_name">7MinutesWorkout</string>
-    <string name="startimage">startImage</string>
+    <string name="startImage">startImage</string>
+    <string name="start">Start</string>
+    <string name="bmi">BMI</string>
+    <string name="calculator">Calculator</string>
+    <string name="exercise_history">Exercise History</string>
+    <string name="history">History</string>
+    <string name="calculate_BMI">Calculate BMI</string>
+    <string name="metric_units">Metric Units</string>
+    <string name="us_units">US Units</string>
+    <string name="weight_in_kg">Weight (in kg)</string>
+    <string name="height_in_cm">Height (in cm)</string>
+    <string name="weight_in_pounds">Weight (in pounds)</string>
+    <string name="feet">Feet</string>
+    <string name="inch">Inch</string>
+    <string name="your_bmi">Your BMI</string>
+    <string name="calculate">Calculate</string>
+    <string name="please_enter_valid_value">Please Enter valid value</string>
+    <string name="exercise_completed">Exercise completed</string>
+    <string name="no_data_available">No data available</string>
+    <string name="get_ready_for">GET READY FOR</string>
+    <string name="exercise_image">Exercise Image</string>
+    <string name="upcoming_exercise">Upcoming Exercise</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="quit_message">This will stop your workout. You\'ve come this far, are you sure you want to quit</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="end">End</string>
+    <string name="start_image">start image</string>
+    <string name="congratulation">Congratulation</string>
+    <string name="complete_workout_desc">You have complete the workout</string>
+    <string name="finish">Finish</string>
 </resources>

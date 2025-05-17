@@ -10,6 +10,7 @@ import android.os.CountDownTimer
 import android.speech.tts.TextToSpeech
 import android.util.Log
 import android.view.View
+import androidx.activity.OnBackPressedCallback
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.a7minutesworkout.constant.Constants
 import com.example.a7minutesworkout.model.ExerciseModel
@@ -23,12 +24,12 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     private var binding : ActivityExerciseBinding? = null
     private var restTimer : CountDownTimer? = null
     private var restProgress = 0
-    private val restTimeDuration : Long = 3
+    private val restTimeDuration : Long = 11
     private val tickTime : Long = 1000
 
     private var exerciseTimer : CountDownTimer? = null
     private var exerciseProgress = 0
-    private val exerciseTimeDuration : Long = 5
+    private val exerciseTimeDuration : Long = 31
 
     private var exerciseList : ArrayList<ExerciseModel>? = null
     private var currentExercisePosition = -1
@@ -53,6 +54,13 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
             //onBackPressedDispatcher.onBackPressed()
             customDialogForBackButton()
         }
+
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true){
+            override fun handleOnBackPressed() {
+                customDialogForBackButton()
+            }
+        })
+
         setupRestView()
     }
 
@@ -69,11 +77,12 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
         binding?.flRestView?.visibility = View.VISIBLE
         binding?.tvTitle?.visibility = View.VISIBLE
+        binding?.tvUpcomingLabel?.visibility = View.VISIBLE
+        binding?.tvUpComingExerciseName?.visibility = View.VISIBLE
+
         binding?.tvExerciseName?.visibility = View.INVISIBLE
         binding?.flExerciseView?.visibility = View.INVISIBLE
         binding?.ivImage?.visibility = View.INVISIBLE
-        binding?.tvUpcomingLabel?.visibility = View.VISIBLE
-        binding?.tvUpComingExerciseName?.visibility = View.VISIBLE
         if (restTimer != null){
             restTimer?.cancel()
             restProgress = 0
@@ -83,10 +92,11 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         setupExerciseRecyclerView()
     }
 
-    override fun onBackPressed() {
-        //super.onBackPressed()
-        customDialogForBackButton()
-    }
+
+//    override fun onBackPressed() {
+//        //super.onBackPressed()
+//        customDialogForBackButton()
+//    }
 
     private fun customDialogForBackButton(){
         val customDialog = Dialog(this)
@@ -101,7 +111,6 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
             customDialog.dismiss()
         }
         customDialog.show()
-
     }
 
     private fun setupExerciseRecyclerView(){

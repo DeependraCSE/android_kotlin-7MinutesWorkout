@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.a7minutesworkout.R
 import com.example.a7minutesworkout.adapter.HistoryAdapter
 import com.example.a7minutesworkout.database.HistoryDao
 import com.example.a7minutesworkout.application.WorkOutApp
@@ -21,7 +22,7 @@ class HistoryActivity : AppCompatActivity() {
         setSupportActionBar(binding?.toolbarHistoryActivity)
         if (supportActionBar != null){
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
-            supportActionBar?.title = "History"
+            supportActionBar?.title = resources.getString(R.string.history)
         }
 
         binding?.toolbarHistoryActivity?.setNavigationOnClickListener {

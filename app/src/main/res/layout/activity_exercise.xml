@@ -15,11 +15,13 @@
         app:titleTextColor="@color/colorPrimary"
         app:layout_constraintTop_toTopOf="parent"
         />
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tvTitle"
-        android:text="GET READY FOR"
+        android:text="@string/get_ready_for"
         android:textSize="@dimen/default_button_text_size"
         android:textColor="@color/colorAccent"
         android:textStyle="bold"
@@ -70,7 +72,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tvUpcomingLabel"
-        android:text="Upcoming Exercise"
+        android:text="@string/upcoming_exercise"
         android:textColor="@color/colorPrimary"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -97,6 +99,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:id="@+id/ivImage"
+        android:contentDescription="@string/exercise_image"
         android:scaleType="fitXY"
         android:src="@drawable/ic_jumping_jacks"
         android:visibility="visible"
@@ -123,7 +126,6 @@
         android:id="@+id/flExerciseView"
         android:layout_marginTop="10dp"
         android:background="@drawable/item_circular_color_accent_border"
-
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvExerciseName"
